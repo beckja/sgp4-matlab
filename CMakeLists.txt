@@ -33,7 +33,9 @@ set (MFILES
 )
 
 # install copy of matlab files in build directory for testing
-copy_files_to_build(${PROJECT_NAME} FILES ${MFILES} DESTINATION .)
+foreach (MFILE ${MFILES})
+	configure_file (${MFILE} ${MFILE} COPYONLY)
+endforeach (MFILE ${MFILES})
 
 install (PROGRAMS ${MFILES} DESTINATION ${MATLAB_INSTALL_DIR}/)
 

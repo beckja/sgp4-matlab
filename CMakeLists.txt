@@ -2,8 +2,6 @@
 #
 # 
 
-cmake_minimum_required (VERSION 2.8)
-
 project(matsgp4)
 
 set (MATLAB_INSTALL_DIR "${MATLAB_INSTALL_DIR}/SGP4")
